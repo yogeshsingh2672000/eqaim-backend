@@ -5,6 +5,7 @@ import { fetchFeedback } from "../utils/feedback.js";
 router.get("/all", async (req, res) => {
   try {
     const data = await fetchFeedback();
+    console.log("fetching all data");
     res.status(200).send(data);
   } catch (error) {
     console.log(error);
